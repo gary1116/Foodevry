@@ -22,3 +22,15 @@ is a folder in which there are basuc commands on how react is used with jsx tags
 -helps us to hosts our app on https
 -tree shaking - removes unused code for us
 -it has different build for dev and production
+
+
+two types of Export/Import 
+
+default Export/import
+
+export default Component;
+import Component from "path";
+
+Named Expot/Import 
+export const Component
+ import {Component} from "Path";
