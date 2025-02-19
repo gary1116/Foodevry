@@ -107,7 +107,7 @@
 .restaurant-card{
     margin: 0; /* Avoid unnecessary margins */
     padding: 10px; /* Keep padding inside cards */
-    height: 400px;
+    height: 450px;
     width: 200px;
     border-radius: 10px;
     gap: 5px;
@@ -131,19 +131,76 @@
 }
 
 
+
+.body{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 10px;
+  width: 100%;
+  height: 70%;
+}
+
+.Bar{
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  gap: 15px;
+  
+}
+
+.filter{
+  height: 35px;
+  width: 180px;
+  border-radius: 10px;
+  cursor: pointer;
+  
+}
+
+.filter:hover{
+  box-shadow: rgba(6, 24, 30, 0.4) 0px 0px 0px 2px, rgba(6, 24, 30, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+
+.Shimmer-card{
+  margin: 0; /* Avoid unnecessary margins */
+  padding: 10px; /* Keep padding inside cards */
+  height: 450px;
+  width: 200px;
+  border-radius: 10px;
+  gap: 5px;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+}
 .Search{
     height: 35px;
     margin: 5px;
-    width: 85%;
+    width: 600px;
     border-radius: 10px;
     border: 1px solid black;
+}
+input{
+  caret:10px;
 }
 .Search:hover{
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
-.body{
-    margin: 10px;
-    width: 100%;
-    height: 70%;
+.searchBtn{
+  height: 35px;
+  width: 100px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.searchBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
