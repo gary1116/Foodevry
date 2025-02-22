@@ -61,11 +61,10 @@ Separation of Concerns (SoC) is a design principle that aims to separate a syste
 a normal js function made by react for specific purpose
 
 
- useEffect(()=>{
-        
-    },[]);
+ # useEffect
+   useEffect(()=>{},[]);
 
-   { ()=>{} } => call back function
+    ()=>{} => call back function
     []=> dependency array
 
 
@@ -74,7 +73,20 @@ a normal js function made by react for specific purpose
 
     when the component will be loaded and the page will be loaded it will call the callback function in useEffect and perform the action present in it
 
+    a use effect without a dependency array will render everytime my component renders 
 
+    if dependency array is empty = [] useEffect is called on initial render (just once) 
+    
+    if we put something inside that dependency array then it will only be called when that dependency changes
+
+   # useState
+   const [list,setList]=useState();
+
+   never create your useState outside your component
+   try to create useState on top
+   never create useState in if else case,for loop or any loop , not even function
+
+  
  
  # conditional rendering
 
@@ -84,3 +96,19 @@ if you have a condition and you render according to condition then it is known a
 
 # state react variable
 whenever state variables update, react triggers a reconciliation cycle (re-renders the componnet)
+
+
+# Tacke CORS error 
+you will end up in cors error so just download extension for cors it is allow cors and turn it on and this page will work
+
+
+# how to create configuration for routing 
+inorder to create routing configuration you need to import createrouterbrowser for react-router-dom
+and use it in your root file in thr project case it is App.js
+you can go through App.js for routing configuration
+
+createrouterbrowser :- it takes a list of object know as path ,path is nothing but an object
+
+now appRouter constant is the app configuration
+
+now RouterProvide is another componnt from react-router-dom whoch helps us provide the configuration we made to react for it to work

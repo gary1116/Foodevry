@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Logo from './images/food-logo.png';
 import home from './images/home.png';
 import cart from './images/shopping-cart.png';
@@ -10,6 +10,11 @@ const Header = ()=>{
 
     const [btnName,setbtnName] = useState("Login");
 
+    // a use effect without a dependency array will render everytime my component renders 
+    // if dependency array is empty = [] useEffect is called on initial render (just once) 
+    // if we put something inside that dependency array then it will only be called when that dependency changes
+
+    
     return (
         <div className="header">
             <div className="logo-container">
