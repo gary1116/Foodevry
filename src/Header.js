@@ -4,6 +4,7 @@ import home from './images/home.png';
 import cart from './images/shopping-cart.png';
 import info from './images/info.png';
 import call from './images/call.png';
+import { Link } from 'react-router-dom';
 
 
 const Header = ()=>{
@@ -18,13 +19,13 @@ const Header = ()=>{
     return (
         <div className="header">
             <div className="logo-container">
-                <img src={Logo} alt="food Logo" />
+            <Link to={"/"} >   <img src={Logo} alt="food Logo" /></Link>
             </div>
             <div className="nav-items">
-                <img src={home} className="item" alt="home img" />
+            <Link to={"/"} ><img src={home} className="item" alt="home img" /></Link>
                 <img src={cart} className="item" alt="cart img" />
-                <img src={info} className="item" alt="info img" />
-                <img src={call} className="item" alt="home img" />
+                <Link to={"/about"}><img src={info} className="item" alt="info img" /></Link>
+                <Link to={"/contact"} ><img src={call} className="item" alt="phone img" /></Link>
                 <button className='filter' onClick={()=>{btnName =="Login" ? setbtnName("Logout") :setbtnName("Login") }}>{btnName}</button>
             </div>
         </div>

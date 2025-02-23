@@ -112,3 +112,67 @@ createrouterbrowser :- it takes a list of object know as path ,path is nothing b
 now appRouter constant is the app configuration
 
 now RouterProvide is another componnt from react-router-dom whoch helps us provide the configuration we made to react for it to work
+
+------------------CHILDREN ROUTES-----------------
+ path:"/",
+        element: <App />,
+        errorElement:<Error/>,
+        children:[
+            {
+                path:"/",
+                element:<Body />
+            },
+            {
+                path:"/about",
+                element:<AboutUs />
+            },
+            {
+                path:"/contact",
+                element:<Contact/>
+            }
+        ]
+
+        here path:/ is considered as a root route so in default "/" body component will be loaded
+
+        and in function component
+
+         <div className="app">
+            <Header/>
+            <Outlet/>
+        </div>
+
+        here <Outlet/> is mentioned so that it can swap its places with other children componnets
+
+
+        ------------------------------------------------------------------
+        in react dont use anchor tags to go to another page
+        because whole page gets refreshed
+        instead of anchor we can use link tag which is given to us by react router dom
+
+        anchor tag:- reloads the page
+        Link tag:- refreshes the components
+
+
+# single page applications
+
+        in spa you dont change the page you dont need to refresh as it will switch from one component to another via client side routing
+
+# types of routing in web apps
+
+        client side routing:-
+            Client-side routing means that React handles the routing within the browser, without making a full request to the server for each new page.
+
+        server side routing:-
+            Server-side routing means that each page request is sent to the server, and the server responds with a new HTML page.
+
+
+# dynamic routing
+        inorder to routing you need to add ":" so that react will understand this data is dynamic
+            for example
+
+            {
+                path:"/restaurants/:resId",
+                element:<RestMenu />
+            }
+
+        here :resId is dynamic
