@@ -1,12 +1,30 @@
 import React from 'react'
+import UserClass from './UserClass'
 
-const AboutUs = () => {
-  return (
-    <div>
+
+class AboutUs extends React.Component{
+
+  constructor(props){
+    super(props);
+    // console.log("parent constructor");
+  }
+
+  componentDidMount(){
+    // console.log("parent component did mount");
+}
+
+
+  render(){
+
+    // console.log("parent render")
+
+    return(
+      <div>
       <h1>About us</h1>
-      <h3>This is a demo about us will update it later</h3>
+      <UserClass />
     </div>
-  )
+    )
+  }
 }
 
 export default AboutUs

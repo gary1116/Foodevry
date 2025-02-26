@@ -16,12 +16,11 @@ const RestMenu = () => {
 
   console.log(FOOD_MENU_URL)
   const fetchMenu = async () => {
-    const data = await fetch(
-      FOOD_MENU_URL+resId);
+    const data = await fetch(FOOD_MENU_URL+resId);
     const json = await data.json();
 
     setResMenu(json);
-    console.log(json);
+    // console.log(json);
   }
 
   const menuInfo = resMenu?.data?.cards[2]?.card?.card?.info || {};  

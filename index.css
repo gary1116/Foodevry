@@ -208,3 +208,17 @@ a{
   text-decoration: none;
   color: black;
 }
+
+.user-card{
+  padding: 10px;
+  border: 2px solid black;
+  margin: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.profile_dp{
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+}

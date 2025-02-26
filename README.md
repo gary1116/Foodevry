@@ -176,3 +176,5 @@ now RouterProvide is another componnt from react-router-dom whoch helps us provi
             }
 
         here :resId is dynamic
+
+
