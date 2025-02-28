@@ -178,3 +178,8 @@ now RouterProvide is another componnt from react-router-dom whoch helps us provi
         here :resId is dynamic
 
 
+# single responsibility principle
+
+        suppose if we have a component called restaurant menu so it show only restaurant menu thats it in other terms each component should have a single responsibility
+
+
