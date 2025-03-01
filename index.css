@@ -222,3 +222,25 @@ a{
   height: 75px;
   width: 75px;
 }
+
+.offline{
+  border: 5px solid red;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 15px;
+}
+
+.green{
+  border-radius: 50%;
+  border: 3px solid lightgreen;
+  background-color: lightgreen;
+  height: 40px;
+  width: 40px;
+}
+.red{
+  border-radius: 50%;
+  border: 3px solid lightcoral;
+  background-color: lightcoral;
+  height: 40px;
+  width: 40px;
+}
