@@ -82,6 +82,8 @@
     padding: 0 20px; /* Add padding on both left and right sides */
 }
 
+@import "tailwindcss";
+
 .item{
     height: 35px;
     width: 35px;

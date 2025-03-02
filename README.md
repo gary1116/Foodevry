@@ -183,3 +183,13 @@ now RouterProvide is another componnt from react-router-dom whoch helps us provi
         suppose if we have a component called restaurant menu so it show only restaurant menu thats it in other terms each component should have a single responsibility
 
 
+# Lazy Loading
+        chunking
+        code splitting
+        dynamic bundling
+
+        all of this means the same it means that we have to chunk our code into smaller components to optimize our app so that it loads fatser in the browser
+
+
+# tailwind CSS
+        

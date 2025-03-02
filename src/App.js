@@ -10,7 +10,6 @@ import RestMenu from "./RestMenu";
 
 const App=()=>{
 
-
     return (
         <div className="app">
             <Header/>
