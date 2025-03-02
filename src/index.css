@@ -73,31 +73,8 @@
     justify-items: center;
     align-items: center;
 }
-.header{
-    display: flex;
-    width: 100%;
-    height: auto;
-    justify-content:space-between;
-    align-items: center;
-    padding: 0 20px; /* Add padding on both left and right sides */
-}
 
 @import "tailwindcss";
-
-.item{
-    height: 35px;
-    width: 35px;
-    transition: transform 0.3s ease;
-}
-
-.item:hover {
-    transform: scale(1.2); /* Increase the size by 20% */
-}
-
-.nav-items{
-    display: flex;
-    gap: 20px;
-}
 
 .restaurant-container{
     display: grid;
@@ -144,7 +121,6 @@
 }
 
 .Bar{
-  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -189,9 +165,7 @@
 input{
   caret:10px;
 }
-.Search:hover{
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-}
+
 
 .searchBtn{
   height: 35px;
@@ -232,17 +206,3 @@ a{
   padding: 15px;
 }
 
-.green{
-  border-radius: 50%;
-  border: 3px solid lightgreen;
-  background-color: lightgreen;
-  height: 40px;
-  width: 40px;
-}
-.red{
-  border-radius: 50%;
-  border: 3px solid lightcoral;
-  background-color: lightcoral;
-  height: 40px;
-  width: 40px;
-}
