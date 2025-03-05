@@ -191,5 +191,8 @@ now RouterProvide is another componnt from react-router-dom whoch helps us provi
         all of this means the same it means that we have to chunk our code into smaller components to optimize our app so that it loads fatser in the browser
 
 
-# tailwind CSS
-        
+# higher order component
+
+        it is a fucntion that takes a component, enhances that component and returns a component
+
+
