@@ -2,11 +2,14 @@ import { useParams } from 'react-router-dom';
 import useRestaurantMenu from './Utils/useRestaurantMenu';
 import RestCategory from './RestCategory';
 import ShimmerUi from './ShimmerUi';
+import {useState} from "react";
 
 const RestMenu = () => {
 
   const { resId } = useParams();
   const resMenu = useRestaurantMenu(resId);
+  const [showIndex,setShowIndex] = useState(1);
+
 
   const menuInfo = resMenu?.data?.cards[2]?.card?.card?.info || {};
   const { name, city, costForTwoMessage,cuisines } = menuInfo;
@@ -23,8 +26,8 @@ const RestMenu = () => {
   <div className="flex flex-col items-center">
     <h1 className='text-4xl'>{name}</h1>
     <h3 className='text-xl'>{cuisines}</h3>
-      {categories.map(category=>(
-        <RestCategory key={category?.card?.card?.categoryId} data={category?.card?.card}/>
+      {categories.map((category,index)=>(
+        <RestCategory key={category?.card?.card?.categoryId} data={category?.card?.card} showItems={index== showIndex ?true:false} setShowIndex={()=>setShowIndex(index)}/>
       ))}
   </div>
   )
