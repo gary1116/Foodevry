@@ -16,7 +16,7 @@ const RestaurantCard =({resData})=>{
 export const highRatingCard = (RestaurantCard)=>{
     return (props)=>{
         return(
-            <div >
+            <div className="">
             <label className="absolute bg-black text-white m-2 p-2 rounded-lg border-2">High Rating</label>
             <RestaurantCard {...props}/>
             </div>

@@ -59,9 +59,6 @@
   }
   
 *{
-    margin: 0; /* Removes default margins */
-    padding: 0; /* Removes default padding */
-    box-sizing: border-box; /* Ensures consistent box model */
     font-family:"Cormorant Garamond";
     letter-spacing: 1px;
     font-weight: 700;

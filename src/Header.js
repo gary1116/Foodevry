@@ -12,7 +12,7 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
 
   return (
-    <div className="flex justify-between w-full items-center px-5 h-auto ">
+    <div className="flex justify-between w-full items-center bg-amber-100 mb-5">
       {/* Logo */}
       <div className="w-85">
         <Link to={"/"}>

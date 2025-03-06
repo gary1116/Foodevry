@@ -1,28 +1,33 @@
 import { useParams } from 'react-router-dom';
 import useRestaurantMenu from './Utils/useRestaurantMenu';
+import RestCategory from './RestCategory';
+import ShimmerUi from './ShimmerUi';
 
 const RestMenu = () => {
 
-  // const [resMenu, setResMenu] = useState(null);
   const { resId } = useParams();
   const resMenu = useRestaurantMenu(resId);
 
   const menuInfo = resMenu?.data?.cards[2]?.card?.card?.info || {};
-  const { name, city, costForTwoMessage } = menuInfo;
+  const { name, city, costForTwoMessage,cuisines } = menuInfo;
 
   const itemCards = resMenu?.data?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[1]?.card?.card?.itemCards || [];
-  // console.log(itemCards);
+  // console.log(resMenu?.data?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
 
-  return (
-    <div className='menu'>
-      <h1>{name}</h1>
-      <h3>{costForTwoMessage}</h3>
-      <h3>{city}</h3>
-      <ul>
-        {itemCards.map((item) => <li key={item.card.info.id}>{item.card.info.name}:-{item.card.info.defaultPrice / 100 || item.card.info.price / 100}₹</li>)}
-      </ul>
-    </div>
+  const categories = resMenu?.data?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(category=>{
+  return  category.card?.card?.["@type"] =="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+  })|| [];
+  // console.log(categories);
+
+  return  (
+  <div className="flex flex-col items-center">
+    <h1 className='text-4xl'>{name}</h1>
+    <h3 className='text-xl'>{cuisines}</h3>
+      {categories.map(category=>(
+        <RestCategory key={category?.card?.card?.categoryId} data={category?.card?.card}/>
+      ))}
+  </div>
   )
 }
 
-export default RestMenu
+export default RestMenu;
