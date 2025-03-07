@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import Logo from './images/food-logo.png';
 import home from './images/home.png';
 import cart from './images/shopping-cart.png';
@@ -6,13 +6,16 @@ import info from './images/info.png';
 import call from './images/call.png';
 import { Link } from 'react-router-dom';
 import useOnlineStatus from './Utils/useOnlineStatus';
+import UserContext from './Utils/UserContext';
 
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
   const onlineStatus = useOnlineStatus();
+  const {loggedInUser} = useContext(UserContext);
+
 
   return (
-    <div className="flex justify-between w-full items-center bg-amber-100 mb-5">
+    <div className="flex justify-between w-full items-center bg-amber-100 mb-5 shadow-lg">
       {/* Logo */}
       <div className="w-85">
         <Link to={"/"}>
@@ -50,6 +53,7 @@ const Header = () => {
         >
           {btnName}
         </button>
+        <p className='text-xl text-center'>{loggedInUser}</p>
       </div>
     </div>
   );

@@ -8,13 +8,13 @@ const RestMenu = () => {
 
   const { resId } = useParams();
   const resMenu = useRestaurantMenu(resId);
-  const [showIndex,setShowIndex] = useState(1);
+  const [showIndex,setShowIndex] = useState(null);
 
 
   const menuInfo = resMenu?.data?.cards[2]?.card?.card?.info || {};
   const { name, city, costForTwoMessage,cuisines } = menuInfo;
 
-  const itemCards = resMenu?.data?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[1]?.card?.card?.itemCards || [];
+  // const itemCards = resMenu?.data?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[1]?.card?.card?.itemCards || [];
   // console.log(resMenu?.data?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
 
   const categories = resMenu?.data?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(category=>{

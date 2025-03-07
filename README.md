@@ -196,3 +196,22 @@ now RouterProvide is another componnt from react-router-dom whoch helps us provi
         it is a fucntion that takes a component, enhances that component and returns a component
 
 
+# props drilling
+
+passing data from one comp to another comp is tedious and react is a one way datastream
+
+in react data passes from parent to children and so on
+
+now if you want to send a specific data to a child component and that component is two components below the heirachy meaning
+
+parent=> child 1(parent for child 2)=> child 2(parent for child 3)=> child3
+
+now child 3 needs that data so inorder for parentto pass it to child 3 it has to pass it to child 1 and then child 2 
+this is called as props drilling
+
+
+# react context
+
+it is somewhat like a global space to store data so that anyone can use it (it is used in this project)
+ => ./utils/UserContext.js
+it is only used for learning purposes 
