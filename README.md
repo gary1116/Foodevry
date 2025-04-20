@@ -215,3 +215,70 @@ this is called as props drilling
 it is somewhat like a global space to store data so that anyone can use it (it is used in this project)
  => ./utils/UserContext.js
 it is only used for learning purposes 
+
+
+# redux
+it is used to hadle state of our application 
+our application becomes easier to debug as redux offers easy debugging
+build our store to our app
+connect our store to the app
+slice (cartslice)
+dispatch(action)
+selector
+
+
+created store names appStore:-
+const { configureStore } = require("@reduxjs/toolkit");
+
+const appStore = configureStore({});
+
+provided our appStore to our application app.js cos it is our root app:-
+
+  <Provider store={appStore}>
+        <UserContext.Provider value={{loggedInUser:userInfo}}>
+        <div className="app">
+            <Header/>
+            <Outlet/>
+        </div>
+        </UserContext.Provider>
+        </Provider>
+
+now we create slice so the first slice we have created is cartSlice
+
+const cartSlice=createSlice({
+    name: 'cart',
+    initialState:{
+        items:[]
+    },
+    reducers:{
+        addItem:(state,action)=>{
+            state.items.push(action.payload);
+        },
+        removeItem:(state)=>{
+            state.items.pop()
+        },
+        clearCart:(state)=>{
+            state.items.length=0;
+        }
+    }
+
+});
+
+now slice takes name which will be the name of that slice 
+initialstate which means what the start of items will be an empty array
+
+reducers is basically an object used to dispatch an action so that we can change items array or the state of cartSlice
+
+for example 
+addItem:(state,action)=>{
+    <!-- we directly modify the state here -->
+            state.items.push(action.payload);
+        }
+addItem is an action and 
+(state,action)=>{
+            state.items.push(action.payload);
+        }
+the rest is a reducer function
+addItem,removeItem,clearCart are used as am action to do required changes
+
+
