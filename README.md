@@ -308,3 +308,4 @@ installed jest
 installed babel dependencies
 configured babel
 configure parcel config file to disable babel transpilation
+jest configuration 
