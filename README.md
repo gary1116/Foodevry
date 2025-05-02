@@ -282,3 +282,29 @@ the rest is a reducer function
 addItem,removeItem,clearCart are used as am action to do required changes
 
 
+# Testing
+
+types of testing:-
+- Unit Testing
+- Integration testing
+- End to end Testing - e2e testing
+
+
+Unit testing :- you test your react component in isolation
+for example you want to test your header component and only your header component that means you will test your header component in isolation of the app
+
+
+Integration tsting :- it means testing the integration of the app basically testing features that involves multiple components to check all of them work together or not
+
+End to end testing testing:- the application as soon as it lands inside application and till the time when he leaves the application
+
+
+react testing library uses something known as jest it is basically a javascript testing framework
+
+
+# setting up testing
+installed react testing library
+installed jest
+installed babel dependencies
+configured babel
+configure parcel config file to disable babel transpilation
